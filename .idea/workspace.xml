@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd290651-1f79-4e42-b7da-98c47673b5ef" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/math/SimpleMath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/request/converters/NumberConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/MathController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/MathController.java" afterDir="false" />
     </list>
