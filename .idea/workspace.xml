@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd290651-1f79-4e42-b7da-98c47673b5ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/math/SimpleMath.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/request/converters/NumberConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/PersonServices.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/model/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/MathController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/MathController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/GretingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/MathController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/math/SimpleMath.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/model/Greeting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/request/converters/NumberConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/wellington/udemy/controllers/GretingController.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,16 +80,5 @@
       <updated>1749213959190</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/GretingController.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
