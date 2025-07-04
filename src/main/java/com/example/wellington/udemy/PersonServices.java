@@ -1,7 +1,6 @@
 package com.example.wellington.udemy;
 
 import com.example.wellington.udemy.model.Person;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -15,6 +14,7 @@ public class PersonServices {
     private Logger logger = Logger.getLogger(PersonServices.class.getName());
 
     public List<Person> findAll(){
+        logger.info("Finding all People");
         List<Person> persons = new ArrayList<>();
 
         for (int i = 0; i < 8; i++) {
@@ -41,16 +41,33 @@ public class PersonServices {
         return person;
 
     }
-    private Person MockPerson(int i) {
-        Person person = new Person();
 
-        person.setId(couter.incrementAndGet());
-        person.setFirstname("Firstname " + i);
-        person.setLasttname ("Lasttname " + i);
-        person.setAdress("Adress " + i);
-        person.setGender("Gender " + i);
-
+    public Person create(Person person){
+        logger.info("create one Person");
         return person;
+
     }
 
+    public Person update(Person person) {
+        logger.info("update one Person");
+        return person;
+    }
+    public void delete (String id) {
+        logger.info("delete one Person");
+    }
+
+        private Person MockPerson(int i) {
+            Person person = new Person();
+
+            person.setId(couter.incrementAndGet());
+            person.setFirstname("Firstname " + i);
+            person.setLasttname ("Lasttname " + i);
+            person.setAdress("Adress " + i);
+            person.setGender("Gender " + i);
+
+            return person;
+        }
+
+
 }
+
