@@ -5,12 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd290651-1f79-4e42-b7da-98c47673b5ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/repositories/PersonRepositories.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/PersonServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/service/PersonServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +22,7 @@
       <list>
         <option value="Record" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -51,12 +52,15 @@
     &quot;project.structure.last.edited&quot;: &quot;Global Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\win\Desktop\Projeto Udemy-Spring Boot\target" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.example.wellington.udemy.service" />
     </key>
   </component>
   <component name="RunManager">

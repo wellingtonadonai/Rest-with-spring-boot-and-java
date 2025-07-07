@@ -1,21 +1,28 @@
 package com.example.wellington.udemy.model;
 
-import org.springframework.stereotype.Service;
+import jakarta.persistence.*;
+
 
 import java.io.Serializable;
 import java.util.Objects;
 
-
-
+@Entity
+@Table(name = "person")
 public class Person implements Serializable {
-
 
     private static final long serialVersionUID = 1L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "first-name", nullable = false, length = 80)
     private String firstname;
+    @Column(name = "last-name", nullable = false, length = 80)
     private String lasttname;
+    @Column(nullable = false, length = 100)
     private String adress;
+    @Column(nullable = false, length = 6)
     private String gender;
 
     public Person(){}

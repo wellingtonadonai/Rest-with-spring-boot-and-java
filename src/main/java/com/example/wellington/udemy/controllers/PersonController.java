@@ -1,6 +1,6 @@
 package com.example.wellington.udemy.controllers;
 
-import com.example.wellington.udemy.PersonServices;
+import com.example.wellington.udemy.service.PersonServices;
 import com.example.wellington.udemy.model.Person;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

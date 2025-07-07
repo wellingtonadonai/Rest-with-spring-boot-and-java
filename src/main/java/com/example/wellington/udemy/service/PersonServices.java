@@ -1,4 +1,4 @@
-package com.example.wellington.udemy;
+package com.example.wellington.udemy.service;
 
 import com.example.wellington.udemy.model.Person;
 import org.springframework.stereotype.Service;
