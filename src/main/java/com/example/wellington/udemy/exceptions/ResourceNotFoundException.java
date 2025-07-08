@@ -3,10 +3,10 @@ package com.example.wellington.udemy.exceptions;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-@ResponseStatus(HttpStatus.BAD_REQUEST)
-public class UnsupportMathOperationException extends RuntimeException{
+@ResponseStatus(HttpStatus.NOT_FOUND)
+public class ResourceNotFoundException extends RuntimeException{
 
-    public  UnsupportMathOperationException(String message){
+    public  ResourceNotFoundException (String message){
         super(message);
     }
 
