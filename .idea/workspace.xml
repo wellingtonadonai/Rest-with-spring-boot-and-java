@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd290651-1f79-4e42-b7da-98c47673b5ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/wellington/udemy/unitetest/mapper/ObjectMapperTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/wellington/udemy/unitetest/mapper/mocks/MockPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/service/PersonServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/service/PersonServices.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,7 @@
   "keyToString": {
     "Application.UdemyApplication.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.ObjectMapperTests.executor": "Run",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
     "Repository.Attach.Sources": "false",
@@ -64,7 +65,7 @@
       <recent name="com.example.wellington.udemy.service" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ObjectMapperTests">
+  <component name="RunManager" selected="Application.UdemyApplication">
     <configuration name="ObjectMapperTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Projeto-Udemy-Spring-Boot" />
       <extension name="coverage">
