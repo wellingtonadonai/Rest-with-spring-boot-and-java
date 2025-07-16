@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 public class TestLogController {
     private Logger logger = LoggerFactory.getLogger(TestLogController.class.getName());
 
-    @GetMapping("/test")
+    @GetMapping("/api/test/v1")
     public String testLog(){
         logger.debug("This is an debug log");
         logger.info("This is an info log");

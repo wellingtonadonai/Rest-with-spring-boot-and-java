@@ -4,6 +4,8 @@ import com.example.wellington.udemy.data.dto.PersonDTO;
 import com.example.wellington.udemy.exceptions.ResourceNotFoundException;
 import static com.example.wellington.udemy.mapper.ObjectMapper.parseListObject;
 import static com.example.wellington.udemy.mapper.ObjectMapper.parseObject;
+
+import com.example.wellington.udemy.mapper.custom.PersonMapper;
 import com.example.wellington.udemy.model.Person;
 import com.example.wellington.udemy.repositories.PersonRepositories;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ public class PersonServices {
 
     @Autowired
     PersonRepositories repositories;
+    @Autowired
+    PersonMapper converter;
 
 
 
@@ -50,6 +54,7 @@ public class PersonServices {
         return parseObject (repositories.save(entity),PersonDTO.class);
 
     }
+
 
     public PersonDTO update(PersonDTO person) {
         logger.info("update one Person");

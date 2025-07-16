@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/person")
+@RequestMapping("/api/test/v1")
 public class PersonController {
     @Autowired
     private PersonServices service;
@@ -33,6 +33,7 @@ public class PersonController {
         return service.create(Person);
 
     }
+
     @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE,
     produces = MediaType.APPLICATION_JSON_VALUE)
     public PersonDTO update (@RequestBody PersonDTO person){
