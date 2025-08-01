@@ -19,7 +19,7 @@ public class Person implements Serializable {
     @Column(name = "first-name", nullable = false, length = 80)
     private String firstname;
     @Column(name = "last-name", nullable = false, length = 80)
-    private String lasttname;
+    private String lastname;
     @Column(nullable = false, length = 100)
     private String adress;
     @Column(nullable = false, length = 6)
@@ -44,11 +44,11 @@ public class Person implements Serializable {
     }
 
     public String getLasttname() {
-        return lasttname;
+        return lastname;
     }
 
     public void setLasttname(String lasttname) {
-        this.lasttname = lasttname;
+        this.lastname = lasttname;
     }
 
     public String getAdress() {

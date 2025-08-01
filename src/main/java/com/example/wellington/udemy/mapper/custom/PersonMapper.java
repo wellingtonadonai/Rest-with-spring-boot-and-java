@@ -11,7 +11,7 @@ public class PersonMapper {
         PersonDTO dto = new PersonDTO();
         dto.setId(person.getId());
         dto.setFirstname(person.getFirstname());
-        dto.setLasttname(person.getLasttname());
+        dto.setLastname(person.getLasttname());
         dto.setAdress(person.getAdress());
         dto.setGender(person.getGender());
         return dto;
@@ -20,7 +20,7 @@ public class PersonMapper {
         Person entity = new Person();
         entity.setId(person.getId());
         entity.setFirstname(person.getFirstname());
-        entity.setLasttname(person.getLasttname());
+        entity.setLasttname(person.getLastname());
         entity.setAdress(person.getAdress());
         entity.setGender(person.getGender());
         return entity;

@@ -8,6 +8,7 @@ import static com.example.wellington.udemy.mapper.ObjectMapper.parseObject;
 import com.example.wellington.udemy.mapper.custom.PersonMapper;
 import com.example.wellington.udemy.model.Person;
 import com.example.wellington.udemy.repositories.PersonRepositories;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -55,13 +56,12 @@ public class PersonServices {
 
     }
 
-
     public PersonDTO update(PersonDTO person) {
         logger.info("update one Person");
         Person entity = repositories.findById(person.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id"));
         entity.setFirstname(person.getFirstname());
-        entity.setLasttname(person.getLasttname());
+        entity.setLasttname(person.getLastname());
         entity.setAdress(person.getAdress());
         entity.setGender(person.getGender());
 

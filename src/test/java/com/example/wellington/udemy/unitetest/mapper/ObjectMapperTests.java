@@ -25,7 +25,7 @@ public class ObjectMapperTests {
         PersonDTO output = parseObject(inputObject.mockEntity(), PersonDTO.class);
         assertEquals(Long.valueOf(0L), output.getId());
         assertEquals("First Name Test0", output.getFirstname());
-        assertEquals("Last Name Test0", output.getLasttname());
+        assertEquals("Last Name Test0", output.getLastname());
         assertEquals("Address Test0", output.getAdress());
         assertEquals("Male", output.getGender());
     }
@@ -37,7 +37,7 @@ public class ObjectMapperTests {
 
         assertEquals(Long.valueOf(0L), outputZero.getId());
         assertEquals("First Name Test0", outputZero.getFirstname());
-        assertEquals("Last Name Test0", outputZero.getLasttname());
+        assertEquals("Last Name Test0", outputZero.getLastname());
         assertEquals("Address Test0", outputZero.getAdress());
         assertEquals("Male", outputZero.getGender());
 
@@ -45,7 +45,7 @@ public class ObjectMapperTests {
 
         assertEquals(Long.valueOf(7L), outputSeven.getId());
         assertEquals("First Name Test7", outputSeven.getFirstname());
-        assertEquals("Last Name Test7", outputSeven.getLasttname());
+        assertEquals("Last Name Test7", outputSeven.getLastname());
         assertEquals("Address Test7", outputSeven.getAdress());
         assertEquals("Female", outputSeven.getGender());
 
@@ -53,7 +53,7 @@ public class ObjectMapperTests {
 
         assertEquals(Long.valueOf(12L), outputTwelve.getId());
         assertEquals("First Name Test12", outputTwelve.getFirstname());
-        assertEquals("Last Name Test12", outputTwelve.getLasttname());
+        assertEquals("Last Name Test12", outputTwelve.getLastname());
         assertEquals("Address Test12", outputTwelve.getAdress());
         assertEquals("Male", outputTwelve.getGender());
     }
