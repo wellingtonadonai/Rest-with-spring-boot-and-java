@@ -43,12 +43,12 @@ public class Person implements Serializable {
         this.firstname = firstname;
     }
 
-    public String getLasttname() {
+    public String getLastname() {
         return lastname;
     }
 
-    public void setLasttname(String lasttname) {
-        this.lastname = lasttname;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public String getAdress() {
@@ -71,11 +71,11 @@ public class Person implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Person person)) return false;
-        return Objects.equals(getId(), person.getId()) && Objects.equals(getFirstname(), person.getFirstname()) && Objects.equals(getLasttname(), person.getLasttname()) && Objects.equals(getAdress(), person.getAdress()) && Objects.equals(getGender(), person.getGender());
+        return Objects.equals(getId(), person.getId()) && Objects.equals(getFirstname(), person.getFirstname()) && Objects.equals(getLastname(), person.getLastname()) && Objects.equals(getAdress(), person.getAdress()) && Objects.equals(getGender(), person.getGender());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFirstname(), getLasttname(), getAdress(), getGender());
+        return Objects.hash(getId(), getFirstname(), getLastname(), getAdress(), getGender());
     }
 }
