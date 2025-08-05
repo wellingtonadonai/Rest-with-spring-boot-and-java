@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd290651-1f79-4e42-b7da-98c47673b5ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/config/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/serialization/converter/YamlJackson2HttpMessageConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/config/ObjectMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/config/WebConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/TestLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/TestLogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/data/dto/PersonDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/data/dto/PersonDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/mapper/custom/PersonMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/mapper/custom/PersonMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/model/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/serializer/GenderSerializer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/service/PersonServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/service/PersonServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/wellington/udemy/unitetest/mapper/ObjectMapperTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/wellington/udemy/unitetest/mapper/ObjectMapperTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/wellington/udemy/unitetest/mapper/mocks/MockPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/wellington/udemy/unitetest/mapper/mocks/MockPerson.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +45,7 @@
     &quot;Application.UdemyApplication.executor&quot;: &quot;Run&quot;,
     &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
     &quot;JUnit.ObjectMapperTests.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UdemyApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
     &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
     &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
     &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
@@ -97,6 +90,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UdemyApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projeto-Udemy-Spring-Boot" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.wellington.udemy.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.wellington.udemy" />
+      <option name="MAIN_CLASS_NAME" value="com.example.wellington.udemy.UdemyApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
         <option name="Make" enabled="true" />
@@ -111,6 +120,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ObjectMapperTests" />
+        <item itemvalue="JUnit.UdemyApplicationTests.contextLoads" />
       </list>
     </recent_temporary>
   </component>
