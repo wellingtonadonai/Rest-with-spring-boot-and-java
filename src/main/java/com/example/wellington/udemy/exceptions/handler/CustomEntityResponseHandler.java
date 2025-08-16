@@ -1,6 +1,7 @@
 package com.example.wellington.udemy.exceptions.handler;
 
 import com.example.wellington.udemy.exceptions.ExceptionResponse;
+import com.example.wellington.udemy.exceptions.RequiredObjectIsNullException;
 import com.example.wellington.udemy.exceptions.ResourceNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -25,12 +26,22 @@ public class CustomEntityResponseHandler extends ResponseEntityExceptionHandler 
     }
 
     @ExceptionHandler(ResourceNotFoundException.class)
-    public final ResponseEntity<ExceptionResponse> handleNotFoundException(Exception ex, WebRequest request){
+    public final ResponseEntity<ExceptionResponse> handleNotFoundException(Exception ex, WebRequest request) {
         ExceptionResponse response = new ExceptionResponse(
                 new Date(),
                 ex.getMessage(),
                 request.getDescription(false));
         return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
+
+    }
+
+        @ExceptionHandler(RequiredObjectIsNullException.class)
+        public final ResponseEntity<ExceptionResponse> handleBadRequestException (Exception ex, WebRequest request){
+            ExceptionResponse response = new ExceptionResponse(
+                    new Date(),
+                    ex.getMessage(),
+                    request.getDescription(false));
+            return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
 
 
 

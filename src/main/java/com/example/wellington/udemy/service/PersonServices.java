@@ -2,6 +2,7 @@ package com.example.wellington.udemy.service;
 
 import com.example.wellington.udemy.controllers.PersonController;
 import com.example.wellington.udemy.data.dto.PersonDTO;
+import com.example.wellington.udemy.exceptions.RequiredObjectIsNullException;
 import com.example.wellington.udemy.exceptions.ResourceNotFoundException;
 import static com.example.wellington.udemy.mapper.ObjectMapper.parseListObject;
 import static com.example.wellington.udemy.mapper.ObjectMapper.parseObject;
@@ -56,6 +57,8 @@ public class PersonServices {
     }
 
     public PersonDTO create(PersonDTO person){
+
+        if (person == null) throw new RequiredObjectIsNullException();
         logger.info("create one Person");
         var entity = parseObject(person, Person.class);
 
@@ -66,6 +69,7 @@ public class PersonServices {
     }
 
     public PersonDTO update(PersonDTO person) {
+        if (person == null) throw new RequiredObjectIsNullException();
         logger.info("update one Person");
         Person entity = repositories.findById(person.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id"));
