@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd290651-1f79-4e42-b7da-98c47673b5ef" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/exceptions/RequiredObjectIsNullException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/config/OpenApiConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/docs/PersonControllerDocs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/exceptions/handler/CustomEntityResponseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/exceptions/handler/CustomEntityResponseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/service/PersonServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/service/PersonServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/wellington/udemy/service/PersonServicesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/example/wellington/udemy/service/PersonServicesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/wellington/udemy/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +25,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
-        <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -76,6 +77,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.example.wellington.udemy.controllers.docs" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.example.wellington.udemy.unitetest.mapper.mocks" />
       <recent name="com.example.wellington.udemy.service" />
@@ -87,7 +91,7 @@
       <recent name="com.example.wellington.udemy.exceptions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonServicesTest">
+  <component name="RunManager" selected="Application.UdemyApplication">
     <configuration name="ObjectMapperTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Projeto-Udemy-Spring-Boot" />
       <extension name="coverage">
