@@ -1,6 +1,7 @@
 package com.example.wellington.udemy.service;
 
 
+import com.example.wellington.udemy.controllers.BookController;
 import com.example.wellington.udemy.data.dto.BooksDTO;
 import com.example.wellington.udemy.exceptions.RequiredObjectIsNullException;
 import com.example.wellington.udemy.exceptions.ResourceNotFoundException;
@@ -71,10 +72,10 @@ public class BooksServices {
         logger.info("update one Books");
         Books entity = repositories.findById(books.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id"));
-        entity.setAuthor(books.());
-        entity.setTitle(books.getLastname());
-        entity.setAdress(books.getAdress());
-        entity.setGender(books.getGender());
+        entity.setAuthor(books.getAuthor());
+        entity.setTitle(books.getTitle());
+        entity.setLaunch_date(books.getLaunch_date());
+        entity.setPrice(books.getPrice());
 
         var dto = parseObject(repositories.save(entity),BooksDTO.class);
         addHateoasLinkdto(dto);
@@ -92,11 +93,11 @@ public class BooksServices {
 
 
     private void addHateoasLinkdto (BooksDTO dto) {
-        dto.add(linkTo(methodOn(BooksController.class).findById(dto.getId())).withSelfRel().withType("GET"));
-        dto.add(linkTo(methodOn(BooksController.class).findAll()).withRel("findall").withType("GET"));
-        dto.add(linkTo(methodOn(BooksController.class).create(dto)).withRel("create").withType("POST"));
-        dto.add(linkTo(methodOn(BooksController.class).update(dto)).withRel("update").withType("PUT"));
-        dto.add(linkTo(methodOn(BooksController.class).delete(dto.getId())).withRel("delete").withType("DELETE"));
+        dto.add(linkTo(methodOn(BookController.class).findById(dto.getId())).withSelfRel().withType("GET"));
+        dto.add(linkTo(methodOn(BookController.class).findAll()).withRel("findall").withType("GET"));
+        dto.add(linkTo(methodOn(BookController.class).create(dto)).withRel("create").withType("POST"));
+        dto.add(linkTo(methodOn(BookController.class).update(dto)).withRel("update").withType("PUT"));
+        dto.add(linkTo(methodOn(BookController.class).delete(dto.getId())).withRel("delete").withType("DELETE"));
     }
 
 }
