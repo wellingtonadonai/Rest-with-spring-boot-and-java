@@ -1,8 +1,8 @@
 package com.example.wellington.udemy.controllers;
 
 import com.example.wellington.udemy.config.BookControllerDocs;
-import com.example.wellington.udemy.data.dto.BooksDTO;
-import com.example.wellington.udemy.service.BooksServices;
+import com.example.wellington.udemy.data.dto.BookDTO;
+import com.example.wellington.udemy.service.BookServices;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
@@ -17,14 +17,14 @@ import java.util.List;
 public class BookController implements BookControllerDocs {
 
     @Autowired
-    private BooksServices service;
+    private BookServices service;
 
     @GetMapping(produces = {
             MediaType.APPLICATION_JSON_VALUE,
             MediaType.APPLICATION_XML_VALUE,
             MediaType.APPLICATION_YAML_VALUE})
     @Override
-    public List<BooksDTO> findAll() {
+    public List<BookDTO> findAll() {
         return service.findAll();
     }
 
@@ -35,7 +35,7 @@ public class BookController implements BookControllerDocs {
                     MediaType.APPLICATION_YAML_VALUE}
     )
     @Override
-    public BooksDTO findById(@PathVariable("id") Long id) {
+    public BookDTO findById(@PathVariable("id") Long id) {
         return service.findById(id);
     }
 
@@ -50,7 +50,7 @@ public class BookController implements BookControllerDocs {
                     MediaType.APPLICATION_YAML_VALUE}
     )
     @Override
-    public BooksDTO create(@RequestBody BooksDTO book) {
+    public BookDTO create(@RequestBody BookDTO book) {
         return service.create(book);
     }
 
@@ -65,7 +65,7 @@ public class BookController implements BookControllerDocs {
                     MediaType.APPLICATION_YAML_VALUE}
     )
     @Override
-    public BooksDTO update(@RequestBody BooksDTO book) {
+    public BookDTO update(@RequestBody BookDTO book) {
         return service.update(book);
     }
 

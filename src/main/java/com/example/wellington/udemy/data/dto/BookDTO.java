@@ -4,21 +4,22 @@ package com.example.wellington.udemy.data.dto;
 import org.springframework.hateoas.RepresentationModel;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 
 
-public class BooksDTO extends RepresentationModel<BooksDTO> implements Serializable {
+public class BookDTO extends RepresentationModel<BookDTO> implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
 
     private Long id;
     private String author;
-    private String launch_date;
+    private Date launchdate;
     private Double price;
     private String title;
 
-    public BooksDTO() {
+    public BookDTO() {
     }
 
     public Long getId() {
@@ -37,12 +38,12 @@ public class BooksDTO extends RepresentationModel<BooksDTO> implements Serializa
         this.author = author;
     }
 
-    public String getLaunch_date() {
-        return launch_date;
+    public Date getLaunchdate() {
+        return launchdate;
     }
 
-    public void setLaunch_date(String launch_date) {
-        this.launch_date = launch_date;
+    public void setLaunchdate(Date launchdate) {
+        this.launchdate = launchdate;
     }
 
     public Double getPrice() {
@@ -64,12 +65,13 @@ public class BooksDTO extends RepresentationModel<BooksDTO> implements Serializa
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof BooksDTO books)) return false;
-        return Objects.equals(getId(), books.getId()) && Objects.equals(getAuthor(), books.getAuthor()) && Objects.equals(getLaunch_date(), books.getLaunch_date()) && Objects.equals(getPrice(), books.getPrice()) && Objects.equals(getTitle(), books.getTitle());
+        if (!(o instanceof BookDTO bookDTO)) return false;
+        if (!super.equals(o)) return false;
+        return Objects.equals(getId(), bookDTO.getId()) && Objects.equals(getAuthor(), bookDTO.getAuthor()) && Objects.equals(getLaunchdate(), bookDTO.getLaunchdate()) && Objects.equals(getPrice(), bookDTO.getPrice()) && Objects.equals(getTitle(), bookDTO.getTitle());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getAuthor(), getLaunch_date(), getPrice(), getTitle());
+        return Objects.hash(super.hashCode(), getId(), getAuthor(), getLaunchdate(), getPrice(), getTitle());
     }
 }

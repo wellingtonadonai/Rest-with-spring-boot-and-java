@@ -1,7 +1,7 @@
 package com.example.wellington.udemy.config;
 
 
-import com.example.wellington.udemy.data.dto.BooksDTO;
+import com.example.wellington.udemy.data.dto.BookDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -26,7 +26,7 @@ public interface BookControllerDocs {
                             content = {
                                     @Content(
                                             mediaType = MediaType.APPLICATION_JSON_VALUE,
-                                            array = @ArraySchema(schema = @Schema(implementation = BooksDTO.class))
+                                            array = @ArraySchema(schema = @Schema(implementation = BookDTO.class))
                                     )
                             }),
                     @ApiResponse(description = "No Content", responseCode = "204", content = @Content),
@@ -36,7 +36,7 @@ public interface BookControllerDocs {
                     @ApiResponse(description = "Internal Server Error", responseCode = "500", content = @Content)
             }
     )
-    List<BooksDTO> findAll();
+    List<BookDTO> findAll();
 
     @Operation(summary = "Finds a Book",
             description = "Find a specific book by your ID",
@@ -45,7 +45,7 @@ public interface BookControllerDocs {
                     @ApiResponse(
                             description = "Success",
                             responseCode = "200",
-                            content = @Content(schema = @Schema(implementation = BooksDTO.class))
+                            content = @Content(schema = @Schema(implementation = BookDTO.class))
                     ),
                     @ApiResponse(description = "No Content", responseCode = "204", content = @Content),
                     @ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
@@ -54,7 +54,7 @@ public interface BookControllerDocs {
                     @ApiResponse(description = "Internal Server Error", responseCode = "500", content = @Content)
             }
     )
-    BooksDTO findById(@PathVariable("id") Long id);
+    BookDTO findById(@PathVariable("id") Long id);
 
     @Operation(summary = "Adds a new Book",
             description = "Adds a new book by passing in a JSON, XML or YML representation of the book.",
@@ -63,14 +63,14 @@ public interface BookControllerDocs {
                     @ApiResponse(
                             description = "Success",
                             responseCode = "200",
-                            content = @Content(schema = @Schema(implementation = BooksDTO.class))
+                            content = @Content(schema = @Schema(implementation = BookDTO.class))
                     ),
                     @ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
                     @ApiResponse(description = "Unauthorized", responseCode = "401", content = @Content),
                     @ApiResponse(description = "Internal Server Error", responseCode = "500", content = @Content)
             }
     )
-    BooksDTO create(@RequestBody BooksDTO book);
+    BookDTO create(@RequestBody BookDTO book);
 
     @Operation(summary = "Updates a book's information",
             description = "Updates a book's information by passing in a JSON, XML or YML representation of the updated book.",
@@ -79,7 +79,7 @@ public interface BookControllerDocs {
                     @ApiResponse(
                             description = "Success",
                             responseCode = "200",
-                            content = @Content(schema = @Schema(implementation = BooksDTO.class))
+                            content = @Content(schema = @Schema(implementation = BookDTO.class))
                     ),
                     @ApiResponse(description = "No Content", responseCode = "204", content = @Content),
                     @ApiResponse(description = "Bad Request", responseCode = "400", content = @Content),
@@ -88,7 +88,7 @@ public interface BookControllerDocs {
                     @ApiResponse(description = "Internal Server Error", responseCode = "500", content = @Content)
             }
     )
-    BooksDTO update(@RequestBody BooksDTO book);
+    BookDTO update(@RequestBody BookDTO book);
 
     @Operation(summary = "Deletes a Book",
             description = "Deletes a specific book by their ID",

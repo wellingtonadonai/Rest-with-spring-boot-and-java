@@ -2,11 +2,11 @@ package com.example.wellington.udemy.service;
 
 
 import com.example.wellington.udemy.controllers.BookController;
-import com.example.wellington.udemy.data.dto.BooksDTO;
+import com.example.wellington.udemy.data.dto.BookDTO;
 import com.example.wellington.udemy.exceptions.RequiredObjectIsNullException;
 import com.example.wellington.udemy.exceptions.ResourceNotFoundException;
-import com.example.wellington.udemy.model.Books;
-import com.example.wellington.udemy.repositories.BooksRepositories;
+import com.example.wellington.udemy.model.Book;
+import com.example.wellington.udemy.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,20 +20,20 @@ import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.linkTo;
 import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.methodOn;
 
 @Service
-public class BooksServices {
+public class BookServices {
     private final AtomicLong couter = new AtomicLong();
-    private Logger logger = Logger.getLogger(BooksServices.class.getName());
+    private Logger logger = Logger.getLogger(BookServices.class.getName());
 
     @Autowired
-    BooksRepositories repositories;
+    BookRepository repositories;
 
 
 
 
 
-    public List<BooksDTO> findAll(){
+    public List<BookDTO> findAll(){
         logger.info("Finding all Books");
-        var bookss = parseListObject(repositories.findAll(), BooksDTO.class);
+        var bookss = parseListObject(repositories.findAll(), BookDTO.class);
         bookss.forEach(this::addHateoasLinkdto);
         return bookss;
 
@@ -42,12 +42,12 @@ public class BooksServices {
 
 
 
-    public BooksDTO findById(Long id){
+    public BookDTO findById(Long id){
         logger.info("Finding one Books");
 
          var entity = repositories.findById(id)
                  .orElseThrow(()-> new ResourceNotFoundException("No records found for this id"));
-        var dto = parseObject(entity, BooksDTO.class);
+        var dto = parseObject(entity, BookDTO.class);
         addHateoasLinkdto(dto);
         return dto;
 
@@ -55,36 +55,36 @@ public class BooksServices {
 
     }
 
-    public BooksDTO create(BooksDTO books){
+    public BookDTO create(BookDTO books){
 
         if (books == null) throw new RequiredObjectIsNullException();
         logger.info("create one Books");
-        var entity = parseObject(books, Books.class);
+        var entity = parseObject(books, Book.class);
 
-        var dto = parseObject (repositories.save(entity),BooksDTO.class);
+        var dto = parseObject (repositories.save(entity), BookDTO.class);
         addHateoasLinkdto(dto);
         return dto;
 
     }
 
-    public BooksDTO update(BooksDTO books) {
+    public BookDTO update(BookDTO books) {
         if (books == null) throw new RequiredObjectIsNullException();
         logger.info("update one Books");
-        Books entity = repositories.findById(books.getId())
+        Book entity = repositories.findById(books.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id"));
         entity.setAuthor(books.getAuthor());
         entity.setTitle(books.getTitle());
-        entity.setLaunch_date(books.getLaunch_date());
+        entity.setLaunchdate(books.getLaunchdate());
         entity.setPrice(books.getPrice());
 
-        var dto = parseObject(repositories.save(entity),BooksDTO.class);
+        var dto = parseObject(repositories.save(entity), BookDTO.class);
         addHateoasLinkdto(dto);
         return dto;
     }
 
     public void delete (Long id) {
         logger.info("delete one Books");
-        Books entity = repositories.findById(id)
+        Book entity = repositories.findById(id)
                 .orElseThrow(()-> new ResourceNotFoundException("No records found for this id"));
 
         repositories.delete(entity);
@@ -92,7 +92,7 @@ public class BooksServices {
     }
 
 
-    private void addHateoasLinkdto (BooksDTO dto) {
+    private void addHateoasLinkdto (BookDTO dto) {
         dto.add(linkTo(methodOn(BookController.class).findById(dto.getId())).withSelfRel().withType("GET"));
         dto.add(linkTo(methodOn(BookController.class).findAll()).withRel("findall").withType("GET"));
         dto.add(linkTo(methodOn(BookController.class).create(dto)).withRel("create").withType("POST"));

@@ -3,11 +3,12 @@ package com.example.wellington.udemy.model;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
 @Table(name = "books")
-public class Books implements Serializable {
+public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -20,7 +21,7 @@ public class Books implements Serializable {
 
     @Column(name = "launch_date", nullable = false)
     @Temporal(TemporalType.DATE)
-    private String launch_date;
+    private Date launchdate;
 
     @Column(nullable = false)
     private Double price;
@@ -28,7 +29,7 @@ public class Books implements Serializable {
     @Column(nullable = false, length = 250)
     private String title;
 
-    public Books() {
+    public Book() {
     }
 
     public Long getId() {
@@ -47,12 +48,12 @@ public class Books implements Serializable {
         this.author = author;
     }
 
-    public String getLaunch_date() {
-        return launch_date;
+    public Date getLaunchdate() {
+        return launchdate;
     }
 
-    public void setLaunch_date(String launch_date) {
-        this.launch_date = launch_date;
+    public void setLaunchdate(Date launchdate) {
+        this.launchdate = launchdate;
     }
 
     public Double getPrice() {
@@ -74,12 +75,12 @@ public class Books implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Books books)) return false;
-        return Objects.equals(getId(), books.getId()) && Objects.equals(getAuthor(), books.getAuthor()) && Objects.equals(getLaunch_date(), books.getLaunch_date()) && Objects.equals(getPrice(), books.getPrice()) && Objects.equals(getTitle(), books.getTitle());
+        if (!(o instanceof Book book)) return false;
+        return Objects.equals(getId(), book.getId()) && Objects.equals(getAuthor(), book.getAuthor()) && Objects.equals(getLaunchdate(), book.getLaunchdate()) && Objects.equals(getPrice(), book.getPrice()) && Objects.equals(getTitle(), book.getTitle());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getAuthor(), getLaunch_date(), getPrice(), getTitle());
+        return Objects.hash(getId(), getAuthor(), getLaunchdate(), getPrice(), getTitle());
     }
 }
